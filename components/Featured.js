@@ -1,9 +1,9 @@
 const Featured = () => {
   return (
-    <section class="wrapper style1 special">
+    <section class="wrapper style1 special" id="featured">
       <div class="inner">
         <header>
-          <h2>Duis torquent</h2>
+          <h2>Featured Projects</h2>
           <p>
             Rutrum facilisis. Class aptent taciti sociosqu
             <br />

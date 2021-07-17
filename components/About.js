@@ -1,9 +1,9 @@
 const About = () => {
   return (
-    <section class="wrapper style2 special">
+    <section class="wrapper style2 special" id="about">
       <div class="inner">
         <header>
-          <h2>Ipsum malesuada</h2>
+          <h2>About Me</h2>
           <p>
             Rutrum facilisis. Class aptent taciti sociosqu
             <br />

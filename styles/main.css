@@ -99,7 +99,8 @@ body.is-preload *:after {
 }
 body {
  background-color: #ffffff;
- color: #565656;
+ /* color: #565656; */
+ color: #dfdfdf;
 }
 body,
 input,
@@ -149,7 +150,6 @@ textarea {
  select,
  textarea {
   font-size: 11pt;
-  color: mintcream;
  }
 }
 @media screen and (max-width: 360px) {
@@ -1564,7 +1564,8 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
- background-color: rgba(86, 86, 86, 0.075);
+ /* background-color: rgba(25, 120, 172, 0.35); */
+ background-color: rgba(78,150,243,0.50);
 }
 input[type="submit"].primary,
 input[type="reset"].primary,
@@ -1764,20 +1765,20 @@ input[type="radio"] + label:before {
  border-radius: 100%;
 }
 ::-webkit-input-placeholder {
- color: inherit !important;
- opacity: 0.5;
+ color: black;
+ opacity: 1;
 }
 :-moz-placeholder {
- color: inherit !important;
- opacity: 0.5;
+ color: black;
+ opacity: 1;
 }
 ::-moz-placeholder {
- color: inherit !important;
- opacity: 0.5;
+ color: black;
+ opacity: 1;
 }
 :-ms-input-placeholder {
- color: inherit !important;
- opacity: 0.5;
+ color: black;
+ opacity: 1;
 }
 select {
  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MCcgaGVpZ2h0PSc0MCcgcHJlc2VydmVBc3BlY3RSYXRpbz0nbm9uZScgdmlld0JveD0nMCAwIDQwIDQwJz48cGF0aCBkPSdNOS40LDEyLjNsMTAuNCwxMC40bDEwLjQtMTAuNGMwLjItMC4yLDAuNS0wLjQsMC45LTAuNGMwLjMsMCwwLjYsMC4xLDAuOSwwLjRsMy4zLDMuM2MwLjIsMC4yLDAuNCwwLjUsMC40LDAuOSBjMCwwLjQtMC4xLDAuNi0wLjQsMC45TDIwLjcsMzEuOWMtMC4yLDAuMi0wLjUsMC40LTAuOSwwLjRjLTAuMywwLTAuNi0wLjEtMC45LTAuNEw0LjMsMTcuM2MtMC4yLTAuMi0wLjQtMC41LTAuNC0wLjkgYzAtMC40LDAuMS0wLjYsMC40LTAuOWwzLjMtMy4zYzAuMi0wLjIsMC41LTAuNCwwLjktMC40UzkuMSwxMi4xLDkuNCwxMi4zeicgZmlsbD0nIzU2NTY1NicgLz48L3N2Zz4=");
@@ -2135,7 +2136,8 @@ ul.icons.style2.major li:before {
  }
 }
 ul.icons li a.icon:hover:before {
- background-color: rgba(86, 86, 86, 0.075);
+ /* background-color: rgba(86, 86, 86, 0.075); */
+ background-color: rgba(78,150,243, 0.5);
 }
 section header h1:before,
 section header h2:before,
@@ -2155,6 +2157,7 @@ article header h6:before {
  height: 1px;
  border-top: solid 1px;
  margin: 0 0 1em 0;
+ color: rgb(61, 111, 177);
 }
 section header p,
 article header p {
@@ -2306,7 +2309,13 @@ table.alt tbody tr td {
 .spotlight .content header h6:before {
  margin-left: 0 !important;
  margin-right: 0 !important;
+ color: rgb(61, 111, 177);
 }
+
+.spotlight .content header{
+    /* color: rgb(61, 111, 177); */
+}
+
 .spotlight .content > :last-child {
  margin-bottom: 0;
 }
@@ -2831,7 +2840,8 @@ table.alt tbody tr td {
  right: 0;
  text-align: center;
  top: 0;
- width: 100%;
+ width: 20em;
+ max-width: 80%;
  z-index: 10000;
  visibility: hidden;
 }
@@ -2954,7 +2964,8 @@ table.alt tbody tr td {
  right: 2em;
  width: 3.75em;
  height: 3.75em;
- background-color: #565656;
+ /* background-color: #565656; */
+ background-color: rgb(61, 111, 177);
  border-radius: 100%;
  z-index: -1;
 }

@@ -1,4 +1,5 @@
 import Header from "./Header";
+import Link from "next/link";
 
 const Menu = () => {
   return (
@@ -8,19 +9,27 @@ const Menu = () => {
         <h2>Menu</h2>
         <ul class="links">
           <li>
-            <a href="index.html">Home</a>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
           </li>
           <li>
-            <a href="generic.html">Ipsum veroeros</a>
+            <Link href="/#about">
+              <a>About me</a>
+            </Link>
           </li>
           <li>
-            <a href="generic.html">Tempus etiam</a>
+            <Link href="/projects">
+              <a>Projects</a>
+            </Link>
           </li>
           <li>
-            <a href="generic.html">Consequat dolor</a>
+            <Link href="/#contact">
+              <a>Contact</a>
+            </Link>
           </li>
           <li>
-            <a href="elements.html">Elements</a>
+            <a href="elements.html">Resume</a>
           </li>
         </ul>
         <ul class="actions stacked">

@@ -2,11 +2,11 @@ import Icon from "./Icon";
 
 const Contact = () => {
   return (
-    <section id="footer" class="wrapper split style2">
+    <section id="contact" class="wrapper split style2">
       <div class="inner">
         <section>
           <header>
-            <h3>Magna lorem ipsum</h3>
+            <h3>Contact</h3>
           </header>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
