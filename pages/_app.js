@@ -1,6 +1,5 @@
 import "../styles/style.css";
 import "../styles/main.css";
-import Link from "next/link";
 import Menu from "../components/Menu";
 
 
