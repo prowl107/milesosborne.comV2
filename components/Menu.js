@@ -1,5 +1,4 @@
 import Header from "./Header";
-import Link from "next/link";
 
 const Menu = () => {
   return (

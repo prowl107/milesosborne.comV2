@@ -63,12 +63,12 @@ const Contact = () => {
           </form>
         </section>
       </div>
-      <div class="copyright">
+      {/* <div class="copyright">
         <p>
           &copy; Untitled. All rights reserved. Lorem ipsum dolor sit amet
           nullam.
         </p>
-      </div>
+      </div> */}
     </section>
   );
 };
