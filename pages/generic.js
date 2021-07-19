@@ -1,17 +1,20 @@
+import Image from 'next/image'
+
 const generic = () => {
   return (
     <div id="wrapper" style={{height: 100 + 'vh',backgroundColor:"#1b1c1c"}}>
-      <section id="main" class="wrapper style1">
-        <div class="inner">
-          <header class="major">
+      <section id="main" className="wrapper style1">
+        <div className="inner">
+          <header className="major">
             <h1>Generic Page</h1>
             <p>Lorem ipsum dolor sit magna consectetur</p>
           </header>
-          <span class="image main">
-            <img
+          <span className="image main">
+            <Image src="/images/minimal-abstract-background-5k-hi-1920x1080.jpg" alt=""/>
+            {/* <img
               src="/images/minimal-abstract-background-5k-hi-1920x1080.jpg"
               alt=""
-            />
+            /> */}
           </span>
           <p>
             Donec eget ex magna. Interdum et malesuada fames ac ante ipsum
@@ -25,7 +28,7 @@ const generic = () => {
           </p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
+            dapibus rutrum facilisis. className aptent taciti sociosqu ad litora
             torquent per conubia nostra, per inceptos himenaeos. Etiam tristique
             libero eu nibh porttitor fermentum. Nullam venenatis erat id
             vehicula viverra. Nunc ultrices eros ut ultricies condimentum.

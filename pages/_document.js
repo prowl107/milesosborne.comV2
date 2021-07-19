@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head />
-        <body class="is-preload">
+        <body className="is-preload">
           <Main />
           <NextScript />
         </body>

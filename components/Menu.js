@@ -1,4 +1,5 @@
 import Header from "./Header";
+import Link from "next/link";
 
 const Menu = () => {
   return (
@@ -6,7 +7,7 @@ const Menu = () => {
       <Header></Header>
       <nav id="menu">
         <h2>Menu</h2>
-        <ul class="links">
+        <ul className="links">
           <li>
             <Link href="/">
               <a>Home</a>
@@ -31,14 +32,14 @@ const Menu = () => {
             <a href="elements.html">Resume</a>
           </li>
         </ul>
-        <ul class="actions stacked">
+        <ul className="actions stacked">
           <li>
-            <a href="#" class="button fit primary">
+            <a href="#" className="button fit primary">
               Get Started
             </a>
           </li>
           <li>
-            <a href="#" class="button fit">
+            <a href="#" className="button fit">
               Log In
             </a>
           </li>

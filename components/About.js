@@ -1,54 +1,54 @@
 const About = () => {
   return (
-    <section class="wrapper style2 special" id="about">
-      <div class="inner">
+    <section className="wrapper style2 special" id="about">
+      <div className="inner">
         <header>
           <h2>About Me</h2>
           <p>
-            Rutrum facilisis. Class aptent taciti sociosqu
+            Rutrum facilisis. className aptent taciti sociosqu
             <br />
             litora torquent et conubia etiam nostra.
           </p>
         </header>
-        <ul class="icons major style2">
+        <ul className="icons major style2">
           <li>
-            <span class="icon solid fa-code">
-              <span class="label">Lorem</span>
+            <span className="icon solid fa-code">
+              <span className="label">Lorem</span>
             </span>
           </li>
           <li>
-            <span class="icon solid fa-cog">
-              <span class="label">Ipsum</span>
+            <span className="icon solid fa-cog">
+              <span className="label">Ipsum</span>
             </span>
           </li>
           <li>
-            <span class="icon solid fa-gem">
-              <span class="label">Dolor</span>
+            <span className="icon solid fa-gem">
+              <span className="label">Dolor</span>
             </span>
           </li>
           <li>
-            <span class="icon solid fa-camera-retro">
-              <span class="label">Feugiat</span>
+            <span className="icon solid fa-camera-retro">
+              <span className="label">Feugiat</span>
             </span>
           </li>
           <li>
-            <span class="icon solid fa-briefcase">
-              <span class="label">Tempus</span>
+            <span className="icon solid fa-briefcase">
+              <span className="label">Tempus</span>
             </span>
           </li>
         </ul>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus
-          rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per
+          rutrum facilisis. className aptent taciti sociosqu ad litora torquent per
           conubia nostra, per inceptos himenaeos malesuada fames ac turpis
-          egestas. In non lorem amet. Duis dapibus rutrum facilisis. Class
+          egestas. In non lorem amet. Duis dapibus rutrum facilisis. className
           aptent taciti sociosqu ad litora torquent per conubia nostra, per
           inceptos himenaeos. Etiam tristique eu nibh.
         </p>
         <footer>
-          <ul class="actions special">
+          <ul className="actions special">
             <li>
-              <a href="#" class="button">
+              <a href="#" className="button">
                 Details
               </a>
             </li>

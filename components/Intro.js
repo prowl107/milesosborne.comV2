@@ -1,13 +1,17 @@
+import Image from "next/image";
+import profilePic from "../public/images/49518dd88d00e1fa27c2eb16a0f85b94.jpg";
+
 const Intro = () => {
   return (
-    <section id="intro" class="wrapper featured style1">
-      <div class="inner">
-        <span class="image">
-          <img src="images/pic01.jpg" alt="" />
+    <section id="intro" className="wrapper featured style1">
+      <div className="inner">
+        <span className="image">
+          {/* <img src="/images/geometry-3d-abstract-wide-8k-ep-2560x1080.jpg" alt="" /> */}
+          <Image layout="intrinsic" src={profilePic} alt="" />
         </span>
-        <div class="content">
+        <div className="content">
           <header>
-            <h1>Hi, I'm Miles</h1>
+            <h1>Hi, Im Miles</h1>
             <p>
               Embedded software engineer
               <br />
@@ -16,9 +20,9 @@ const Intro = () => {
             </p>
           </header>
           <footer>
-            <ul class="actions">
+            <ul className="actions">
               <li>
-                <a href="#" class="button big">
+                <a href="#" className="button big">
                   Get Started
                 </a>
               </li>

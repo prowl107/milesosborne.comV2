@@ -2,43 +2,43 @@ import Icon from "./Icon";
 
 const Contact = () => {
   return (
-    <section id="contact" class="wrapper split style2">
-      <div class="inner">
+    <section id="contact" className="wrapper split style2">
+      <div className="inner">
         <section>
           <header>
             <h3>Contact</h3>
           </header>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
+            dapibus rutrum facilisis. className aptent taciti sociosqu ad litora
             torquent per conubia nostra, per inceptos himenaeos magna fames ac
             turpis egestas amet non lorem amet.
           </p>
-          <ul class="icons">
+          <ul className="icons">
             <li>
-              <a href="#" class="icon brands fa-linkedin">
-                <span class="label">Linkedin</span>
+              <a href="#" className="icon brands fa-linkedin">
+                <span className="label">Linkedin</span>
               </a>
             </li>
             <li>
-              <a href="#" class="icon brands fa-github">
-                <span class="label">GitHub</span>
+              <a href="#" className="icon brands fa-github">
+                <span className="label">GitHub</span>
               </a>
             </li>
             <li>
-              <a href="#" class="icon solid fa-envelope">
-                <span class="label">Email</span>
+              <a href="#" className="icon solid fa-envelope">
+                <span className="label">Email</span>
               </a>
             </li>
           </ul>
         </section>
         <section>
           <form method="post" action="#">
-            <div class="fields">
-              <div class="field half">
+            <div className="fields">
+              <div className="field half">
                 <input type="text" name="name" id="name" placeholder="Name" />
               </div>
-              <div class="field half">
+              <div className="field half">
                 <input
                   type="email"
                   name="email"
@@ -46,7 +46,7 @@ const Contact = () => {
                   placeholder="Email"
                 />
               </div>
-              <div class="field">
+              <div className="field">
                 <textarea
                   name="message"
                   id="message"
@@ -55,7 +55,7 @@ const Contact = () => {
                 ></textarea>
               </div>
             </div>
-            <ul class="actions">
+            <ul className="actions">
               <li>
                 <input type="submit" value="Send Message" />
               </li>
@@ -63,7 +63,7 @@ const Contact = () => {
           </form>
         </section>
       </div>
-      {/* <div class="copyright">
+      {/* <div className="copyright">
         <p>
           &copy; Untitled. All rights reserved. Lorem ipsum dolor sit amet
           nullam.
