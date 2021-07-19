@@ -12,7 +12,7 @@ const Featured = () => {
         </header>
         <section class="spotlight">
           <span class="image">
-            <img src="images/pic02.jpg" alt="" />
+            <img src="/images/49518dd88d00e1fa27c2eb16a0f85b94.jpg" alt="" />
           </span>
           <div class="content">
             <header>
@@ -31,13 +31,21 @@ const Featured = () => {
                     Details
                   </a>
                 </li>
+                <li>
+                  <a href="#" class="button">
+                    View on GitHub
+                  </a>
+                </li>
               </ul>
             </footer>
           </div>
         </section>
         <section class="spotlight">
           <span class="image">
-            <img src="images/pic03.jpg" alt="" />
+            <img
+              src="/images/minimal-abstract-background-5k-hi-1920x1080.jpg"
+              alt=""
+            />
           </span>
           <div class="content">
             <header>
@@ -56,13 +64,21 @@ const Featured = () => {
                     Details
                   </a>
                 </li>
+                <li>
+                  <a href="#" class="button">
+                    View on GitHub
+                  </a>
+                </li>
               </ul>
             </footer>
           </div>
         </section>
         <section class="spotlight">
           <span class="image">
-            <img src="images/pic04.jpg" alt="" />
+            <img
+              src="/images/geometry-3d-abstract-wide-8k-ep-2560x1080.jpg"
+              alt=""
+            />
           </span>
           <div class="content">
             <header>
@@ -81,6 +97,11 @@ const Featured = () => {
                     Details
                   </a>
                 </li>
+                <li>
+                  <a href="#" class="button">
+                    View on GitHub
+                  </a>
+                </li>
               </ul>
             </footer>
           </div>
@@ -88,9 +109,11 @@ const Featured = () => {
         <footer>
           <ul class="actions special">
             <li>
-              <a href="#" class="button">
-                View the archive
-              </a>
+              <Link href="/projects">
+                <a class="button">
+                  View the archive
+                </a>
+              </Link>
             </li>
           </ul>
         </footer>
