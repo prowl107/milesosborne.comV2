@@ -1,13 +1,16 @@
-const About = () => {
+import { PortableText } from "../lib/sanity";
+
+const About = ({profile}) => {
   return (
     <section className="wrapper style2 special" id="about">
       <div className="inner">
         <header>
           <h2>About Me</h2>
           <p>
-            Rutrum facilisis. className aptent taciti sociosqu
+            <PortableText blocks={profile.bio}/>
+            {/* Rutrum facilisis. className aptent taciti sociosqu
             <br />
-            litora torquent et conubia etiam nostra.
+            litora torquent et conubia etiam nostra. */}
           </p>
         </header>
         <ul className="icons major style2">

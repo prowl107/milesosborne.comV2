@@ -19,7 +19,7 @@ const Menu = () => {
             </Link>
           </li>
           <li>
-            <Link href="/projects">
+            <Link href="/#featured">
               <a>Projects</a>
             </Link>
           </li>
@@ -32,7 +32,7 @@ const Menu = () => {
             <a href="elements.html">Resume</a>
           </li>
         </ul>
-        <ul className="actions stacked">
+        {/* <ul className="actions stacked">
           <li>
             <a href="#" className="button fit primary">
               Get Started
@@ -43,7 +43,7 @@ const Menu = () => {
               Log In
             </a>
           </li>
-        </ul>
+        </ul> */}
       </nav>
     </>
   );

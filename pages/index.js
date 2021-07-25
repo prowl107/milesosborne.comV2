@@ -3,8 +3,12 @@ import Intro from "../components/Intro";
 import About from "../components/About";
 import Featured from "../components/Featured";
 import Contact from "../components/Contact";
+import { sanityClient, urlFor } from "../lib/sanity";
 
-export default function Home() {
+const profileQuery = '*[_type == "profile"] | order(_createdAt desc) [0]'
+const featuredQuery = '*[_type == "project" && featured == true] { _id, projectName, slug, description, thumbnail }';
+
+export default function Home({profile, featuredProjects}) {
   return (
     <div id="wrapper">
       <Head>
@@ -16,9 +20,15 @@ export default function Home() {
         />
       </Head>
       <Intro></Intro>
-      <About></About>
-      <Featured></Featured>
+      <About profile={profile}></About>
+      <Featured projects={featuredProjects}></Featured>
       <Contact></Contact>
     </div>
   );
+}
+
+export async function getStaticProps() { 
+  const profile = await sanityClient.fetch(profileQuery);
+  const featuredProjects = await sanityClient.fetch(featuredQuery);
+  return { props: {profile,featuredProjects}};
 }

@@ -4,12 +4,17 @@ export default {
     type: "document",
     fields: [
         {
+            name: "profileTag",
+            title: "Profile Tag",
+            type: "string",
+        },
+        {
             name: "picture",
             title: "Picture",
             type: "image",
-            option: {
+            options: {
                 hotspot: true,
-            }
+            },
         },
         {
             name: "bio",
@@ -21,7 +26,7 @@ export default {
                     type: "block",
                     styles: [{ title: "Normal", value: "normal"}],
                     lists: [],
-                }
+                },
             ]
         },
     ]

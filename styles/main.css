@@ -1,5 +1,7 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,300italic,500,500italic");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
 /*Reflex by Pixelaritypixelarity.com | hello@pixelarity.comLicense: pixelarity.com/license*/html, body, div, span, applet, object,iframe, h1, h2, h3, h4, h5, h6, p, blockquote,pre, a, abbr, acronym, address, big, cite,code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b,u, i, center, dl, dt, dd, ol, ul, li, fieldset,form, label, legend, table, caption, tbody,tfoot, thead, tr, th, td, article, aside,canvas, details, embed, figure, figcaption,footer, header, hgroup, menu, nav, output, ruby,section, summary, time, mark, audio, video {
  margin: 0;
  padding: 0;
@@ -20,6 +22,7 @@ menu,
 nav,
 section {
  display: block;
+ margin: auto;
 }
 body {
  line-height: 1;
@@ -98,7 +101,7 @@ body.is-preload *:after {
  transition: none !important;
 }
 body {
- background-color: #ffffff;
+ background-color: #1b1c1c;
  /* color: #565656; */
  color: #dfdfdf;
 }
@@ -3220,10 +3223,10 @@ body.is-preload #intro .content {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
-    -moz-flex-direction: row-reverse;
-    -webkit-flex-direction: row-reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -moz-align-items: center;
     -webkit-align-items: center;
     -ms-align-items: center;
@@ -3235,6 +3238,8 @@ body.is-preload #intro .content {
     margin: 0 0 0 2em;
     width: 50%;
     -ms-flex: 1;
+    max-width: 500px;
+    margin-right: 2em;
    }
    .projectCard .image img {
     width: 100%;
@@ -3264,26 +3269,26 @@ body.is-preload #intro .content {
    .projectCard .content > :last-child > :last-child {
     margin-bottom: 0;
    }
-   .projectCard:nth-of-type(2n) {
+   /* .projectCard:nth-of-type(2n) {
     -moz-flex-direction: row;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row-reverse;
-   }
+   } */
    
    @media screen and (max-width: 1280px) {
     .projectCard .image {
-     margin: 0 0 0 1.5em;
+     margin: 0 1.5em 0 1.5em;
     }
     .projectCard .content {
      margin: 0 1.5em 0 0;
     }
-    .projectCard:nth-of-type(2n) .image {
+    /* .projectCard:nth-of-type(2n) .image {
      margin: 0 1.5em 0 0;
     }
     .projectCard:nth-of-type(2n) .content {
      margin: 0 0 0 1.5em;
-    }
+    } */
    }
    @media screen and (max-width: 980px) {
     .projectCard {
@@ -3330,5 +3335,16 @@ body.is-preload #intro .content {
    @media screen and (max-width: 980px) {
     .projectCard:last-of-type {
      border-bottom-color: rgba(86, 86, 86, 0.25);
+    }
+   }
+
+   #projectContainer {
+     width: 75%;
+     margin: 0 auto;
+   }
+
+   @media screen and (max-width: 450px) {
+    #projectContainer {
+      width: 90%; 
     }
    }
