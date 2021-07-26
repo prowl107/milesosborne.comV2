@@ -6,7 +6,7 @@ import Contact from "../components/Contact";
 import { sanityClient, urlFor } from "../lib/sanity";
 
 const profileQuery = '*[_type == "profile"] | order(_createdAt desc) [0]'
-const featuredQuery = '*[_type == "project" && featured == true] { _id, projectName, slug, description, thumbnail }';
+const featuredQuery = '*[_type == "project" && featured == true] { _id, projectName, slug, description, thumbnail, sourceURL, documentationURL, hasDocumentation}';
 
 export default function Home({profile, featuredProjects}) {
   return (
@@ -19,7 +19,7 @@ export default function Home({profile, featuredProjects}) {
           content="width=device-width, initial-scale=1, user-scalable=no"
         />
       </Head>
-      <Intro></Intro>
+      <Intro profilePic={profile.picture}></Intro>
       <About profile={profile}></About>
       <Featured projects={featuredProjects}></Featured>
       <Contact></Contact>

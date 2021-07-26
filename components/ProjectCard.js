@@ -1,40 +1,68 @@
-import profilePic from "../public/images/minimal-abstract-background-5k-hi-1920x1080.jpg";
 import Link from "next/link";
 import Image from "next/image";
 import { PortableText, urlFor } from "../lib/sanity";
 
-const ProjectCard = ({name, thumbnail, description}) => {
+const ProjectCard = ({ project }) => {
   return (
     <section className="projectCard">
       <span className="image">
-        <Image layout="responsive" src={profilePic} alt="" />
+        <img src={urlFor(project.thumbnail).url()} />
       </span>
       <div className="content">
         <header>
-          <h3>{name}</h3>
+          <h3>{project.projectName}</h3>
         </header>
         <p>
-        <PortableText blocks = {description}/>
+          <PortableText blocks={project.description} />
         </p>
         <footer>
           <ul className="actions">
-            <li>
-              <Link href="/generic">
-                <a href="#" className="button">
-                  Details
-                </a>
-              </Link>
-            </li>
-            <li>
-              <a href="#" className="button">
-                View on GitHub
-              </a>
-            </li>
+
+            {listDetails({ project })}
+            {listSourceButton({ project })}
+            <h1>{project.slug.current}</h1>
+
           </ul>
         </footer>
       </div>
     </section>
   );
 };
+
+function listDetails({ project }) {
+  if (project.hasDocumentation == true) {
+    if (project.documentationURL != null) {
+      return (
+        <li>
+          <a href={project.documentationURL} className="button" target="_blank">
+            Details
+          </a>
+        </li>
+      );
+    } else {
+      return (
+        <li>
+          <Link href={'/docs/' + project.relatedDoc.slug}>
+            <a href="" className="button">
+              Details
+            </a>
+          </Link>
+        </li>
+      );
+    }
+  }
+}
+
+function listSourceButton({ project }) {
+  if (project.sourceURL != null) {
+    return (
+      <li>
+        <a href={project.sourceURL} className="button" target="_blank">
+          View on GitHub
+        </a>
+      </li>
+    );
+  }
+}
 
 export default ProjectCard;

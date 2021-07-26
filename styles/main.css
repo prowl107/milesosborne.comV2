@@ -2571,6 +2571,8 @@ table.alt tbody tr td {
 .wrapper.featured > .inner > .image img {
  border-radius: 100%;
  width: 7;
+ max-width: 350px;
+ max-height: 350px;
 }
 .wrapper.featured > .inner > .content h1 {
  font-size: 4em;
@@ -3242,6 +3244,8 @@ body.is-preload #intro .content {
     margin-right: 2em;
    }
    .projectCard .image img {
+     max-height: 400px;
+     max-width: 500px;
     width: 100%;
    }
    .projectCard .content {

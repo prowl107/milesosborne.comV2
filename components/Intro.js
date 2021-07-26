@@ -1,13 +1,12 @@
-import Image from "next/image";
-import profilePic from "../public/images/49518dd88d00e1fa27c2eb16a0f85b94.jpg";
+import { urlFor } from "../lib/sanity";
 
-const Intro = () => {
+const Intro = ({profilePic}) => {
   return (
     <section id="intro" className="wrapper featured style1">
       <div className="inner">
         <span className="image">
-          {/* <img src="/images/geometry-3d-abstract-wide-8k-ep-2560x1080.jpg" alt="" /> */}
-          <Image layout="intrinsic" src={profilePic} alt="" />
+        <img src={urlFor(profilePic).url()} />
+          {/* <Image layout="intrinsic" src={profilePic} alt="" /> */}
         </span>
         <div className="content">
           <header>

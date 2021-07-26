@@ -15,7 +15,7 @@ const Featured = ({ projects }) => {
         </header>
         {
           projects.map((item) => (
-            <SpotlightCard name={item.projectName} thumbnail={item.thumbnail} description={item.description}/>
+            <SpotlightCard featureProject = {item}/>
           ))}
         <footer>
           <ul className="actions special">

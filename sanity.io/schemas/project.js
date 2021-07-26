@@ -48,13 +48,13 @@ export default {
             type: "url",
         },
         {
-            name: "isCaseStudy",
-            title: "Is case study or documentation?",
+            name: "hasDocumentation",
+            title: "Has case study or documentation?",
             type: "boolean",
         },
         {
             name: "documentationURL",
-            title: "Link to external case study or documentaiton",
+            title: "Link to external study or documentaiton",
             type: "url",
             description: "Use only if source is on another website!"
         },

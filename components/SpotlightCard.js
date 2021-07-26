@@ -1,36 +1,64 @@
 import Link from "next/link";
 import { PortableText, urlFor } from "../lib/sanity";
 
-const SpotlightCard = ({name, thumbnail, description}) => {
+const SpotlightCard = ({featureProject}) => {
   return (
     <section className="spotlight">
       <span className="image">
-        <img src={urlFor(thumbnail).url()}/>
+        <img src={urlFor(featureProject.thumbnail).url()} />
       </span>
       <div className="content">
         <header>
-          <h3>{name}</h3>
+          <h3>{featureProject.projectName}</h3>
         </header>
         <p>
-          <PortableText blocks = {description}/>
+          <PortableText blocks={featureProject.description} />
         </p>
         <footer>
           <ul className="actions">
-            <li>
-              <a href="#" className="button">
-                Details
-              </a>
-            </li>
-            <li>
-              <a href="#" className="button">
-                View on GitHub
-              </a>
-            </li>
+            {listDetails({ featureProject })}
+            {listSourceButton({ featureProject })}
           </ul>
         </footer>
       </div>
     </section>
   );
 };
+
+function listDetails({ featureProject }) {
+  if (featureProject.hasDocumentation == true) {
+    if (featureProject.documentationURL != null) {
+      return (
+        <li>
+          <a href={featureProject.documentationURL} className="button" target="_blank">
+            Details
+          </a>
+        </li>
+      );
+    } else {
+      return (
+        <li>
+          <Link href={'/docs/' + featureProject.slug.current}>
+            <a href="" className="button">
+              Details
+            </a>
+          </Link>
+        </li>
+      );
+    }
+  }
+}
+
+function listSourceButton({ featureProject }) {
+  if (featureProject.sourceURL != null) {
+    return (
+      <li>
+        <a href={featureProject.sourceURL} className="button" target="_blank">
+          View on GitHub
+        </a>
+      </li>
+    );
+  }
+}
 
 export default SpotlightCard;

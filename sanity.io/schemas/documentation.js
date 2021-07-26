@@ -1,11 +1,11 @@
 export default {
-  name: "caseStudy",
-  title: "Case Study",
+  name: "documentation",
+  title: "Documentation",
   type: "document",
   fields: [
     {
       name: "title",
-      title: "Study title",
+      title: "Document title",
       type: "string",
       description: "Used to overide document title"
     },
@@ -34,5 +34,18 @@ export default {
         },
       ],
     },
+    {
+     name: "slug",
+     title: "Slug",
+     type: "slug",
+     options: {
+      source: 'title',
+      maxLength: 200, // will be ignored if slugify is set
+      slugify: input => input
+                           .toLowerCase()
+                           .replace(/\s+/g, '-')
+                           .slice(0, 200)
+    }
+    }
   ],
 };
