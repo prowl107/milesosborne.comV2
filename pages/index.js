@@ -5,10 +5,13 @@ import Featured from "../components/Featured";
 import Contact from "../components/Contact";
 import { sanityClient, urlFor } from "../lib/sanity";
 
-const profileQuery = '*[_type == "profile"] | order(_createdAt desc) [0]'
-const featuredQuery = '*[_type == "project" && featured == true] { _id, projectName, slug, description, thumbnail, sourceURL, documentationURL, hasDocumentation}';
+const profileQuery = `*[_type == "profile"] | order(_createdAt desc) [0]`;
+const featuredQuery = `*[_type == "project" && featured == true] { _id, projectName, slug, description, thumbnail, sourceURL, documentationURL, hasDocumentation}`;
+const resumeQuery = `*[_type == "resume"] | order(_createdAt desc) [0]{
+  "resumeFile": resumeFile.asset->url
+}`;
 
-export default function Home({profile, featuredProjects}) {
+export default function Home({ profile, featuredProjects }) {
   return (
     <div id="wrapper">
       <Head>
@@ -27,8 +30,8 @@ export default function Home({profile, featuredProjects}) {
   );
 }
 
-export async function getStaticProps() { 
+export async function getStaticProps() {
   const profile = await sanityClient.fetch(profileQuery);
   const featuredProjects = await sanityClient.fetch(featuredQuery);
-  return { props: {profile,featuredProjects}};
+  return { props: { profile, featuredProjects } };
 }

@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Link from "next/link";
 
-const Menu = () => {
+const Menu = ({resumeFile}) => {
   return (
     <>
       <Header></Header>
@@ -29,21 +29,10 @@ const Menu = () => {
             </Link>
           </li>
           <li>
-            <a href="elements.html">Resume</a>
+            <a href="">{resumeFile?.resumeTitle}</a>
+          {/* <a href={`${resumeFile.resumePath}?dl=`} target="_blank">Resume</a> */}
           </li>
         </ul>
-        {/* <ul className="actions stacked">
-          <li>
-            <a href="#" className="button fit primary">
-              Get Started
-            </a>
-          </li>
-          <li>
-            <a href="#" className="button fit">
-              Log In
-            </a>
-          </li>
-        </ul> */}
       </nav>
     </>
   );

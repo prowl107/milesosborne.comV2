@@ -1,17 +1,5 @@
-import Link from "next/link";
 import ProjectCard from "../components/ProjectCard";
 import { sanityClient, urlFor } from "../lib/sanity";
-
-// const projectsQuery = `*[_type == "project"] { _id, 
-//   projectName, 
-//   slug, 
-//   description, 
-//   thumbnail, 
-//   sourceURL, 
-//   documentationURL, 
-//   hasDocumentation,
-//  "relatedDoc": *[_type == "documentation" && references(^._id)]{slug}
-//  }`;
 
 const projectsQuery = `*[_type == "project"] 
 {
