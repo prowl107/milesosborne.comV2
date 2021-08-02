@@ -2,21 +2,34 @@ import Link from "next/link";
 import ProjectCard from "../components/ProjectCard";
 import { sanityClient, urlFor } from "../lib/sanity";
 
-const projectsQuery = `*[_type == "project"] { _id, 
-  projectName, 
+// const projectsQuery = `*[_type == "project"] { _id, 
+//   projectName, 
+//   slug, 
+//   description, 
+//   thumbnail, 
+//   sourceURL, 
+//   documentationURL, 
+//   hasDocumentation,
+//  "relatedDoc": *[_type == "documentation" && references(^._id)]{slug}
+//  }`;
+
+const projectsQuery = `*[_type == "project"] 
+{
+  projectName,
   slug, 
-  description, 
-  thumbnail, 
-  sourceURL, 
-  documentationURL, 
-  hasDocumentation,
- "relatedDoc": *[_type == "documentation" && references(^._id)]{slug}
- }`;
+  description,
+  thumbnail,
+  sourceURL,
+  documentationURL->{
+    slug
+  },
+  documentationRef,
+}`;
 
 export default function projects({ projects }) {
   return (
     <div id="wrapper" style={{ backgroundColor: "#1b1c1c", display: "flex" }}>
-      <section id="main" classNameName="wrapper style1">
+      <section id="main" className="wrapper style1">
         <div className="inner">
           <header className="major">
             <h1>Projects Archive</h1>

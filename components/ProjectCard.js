@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { PortableText, urlFor } from "../lib/sanity";
 
 const ProjectCard = ({ project }) => {
@@ -17,11 +16,8 @@ const ProjectCard = ({ project }) => {
         </p>
         <footer>
           <ul className="actions">
-
             {listDetails({ project })}
             {listSourceButton({ project })}
-            <h1>{project.slug.current}</h1>
-
           </ul>
         </footer>
       </div>
@@ -30,26 +26,24 @@ const ProjectCard = ({ project }) => {
 };
 
 function listDetails({ project }) {
-  if (project.hasDocumentation == true) {
-    if (project.documentationURL != null) {
-      return (
-        <li>
-          <a href={project.documentationURL} className="button" target="_blank">
+  if (project.documentationURL != null) {
+    return (
+      <li>
+        <a href={project.documentationURL} className="button" target="_blank">
+          Details
+        </a>
+      </li>
+    );
+  } else if (project.documentationRef != null) {
+    return (
+      <li>
+        <Link href={`/docs/${project.slug.current}`}>
+          <a href="" className="button">
             Details
           </a>
-        </li>
-      );
-    } else {
-      return (
-        <li>
-          <Link href={'/docs/' + project.relatedDoc.slug}>
-            <a href="" className="button">
-              Details
-            </a>
-          </Link>
-        </li>
-      );
-    }
+        </Link>
+      </li>
+    );
   }
 }
 

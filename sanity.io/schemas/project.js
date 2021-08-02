@@ -48,15 +48,17 @@ export default {
             type: "url",
         },
         {
-            name: "hasDocumentation",
-            title: "Has case study or documentation?",
-            type: "boolean",
-        },
-        {
             name: "documentationURL",
             title: "Link to external study or documentaiton",
             type: "url",
             description: "Use only if source is on another website!"
+        },
+        {
+            name: "documentationRef",
+            title: "Reference to documentation item",
+            type: "reference",
+            to: [{type: "documentation"}],
+            description: "Use only if source is a document within Sanity"
         },
         {
             name: "featured",

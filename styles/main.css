@@ -2571,8 +2571,7 @@ table.alt tbody tr td {
 .wrapper.featured > .inner > .image img {
  border-radius: 100%;
  width: 7;
- max-width: 350px;
- max-height: 350px;
+ max-width: 100%;
 }
 .wrapper.featured > .inner > .content h1 {
  font-size: 4em;
@@ -3126,7 +3125,7 @@ table.alt tbody tr td {
 }
 
 #intro {
-    background-color: #222;
+    background-color: #1b1c1c;
 }
 
 #intro .image {

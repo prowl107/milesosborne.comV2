@@ -26,26 +26,24 @@ const SpotlightCard = ({featureProject}) => {
 };
 
 function listDetails({ featureProject }) {
-  if (featureProject.hasDocumentation == true) {
-    if (featureProject.documentationURL != null) {
-      return (
-        <li>
-          <a href={featureProject.documentationURL} className="button" target="_blank">
+  if (featureProject.documentationURL != null) {
+    return (
+      <li>
+        <a href={featureProject.documentationURL} className="button" target="_blank">
+          Details
+        </a>
+      </li>
+    );
+  } else if (featureProject.documentationRef != null) {
+    return (
+      <li>
+        <Link href={`/docs/${featureProject.slug.current}`}>
+          <a href="" className="button">
             Details
           </a>
-        </li>
-      );
-    } else {
-      return (
-        <li>
-          <Link href={'/docs/' + featureProject.slug.current}>
-            <a href="" className="button">
-              Details
-            </a>
-          </Link>
-        </li>
-      );
-    }
+        </Link>
+      </li>
+    );
   }
 }
 
