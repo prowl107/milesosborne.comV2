@@ -15,7 +15,7 @@ const Featured = ({ projects }) => {
         </header>
         {
           projects.map((item) => (
-            <SpotlightCard featureProject = {item}/>
+            <SpotlightCard key={item._id} featureProject = {item}/>
           ))}
         <footer>
           <ul className="actions special">

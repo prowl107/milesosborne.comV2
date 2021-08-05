@@ -12,20 +12,21 @@ const projectsQuery = `*[_type == "project"]
     slug
   },
   documentationRef,
+  _id,
 }`;
 
 export default function projects({ projects }) {
   return (
     <div id="wrapper" style={{ backgroundColor: "#1b1c1c", display: "flex" }}>
       <section id="main" className="wrapper style1">
-        <div className="inner">
+        <div className="projects-list">
           <header className="major">
             <h1>Projects Archive</h1>
             <p>Lorem ipsum dolor sit magna consectetur</p>
           </header>
           <div id="projectContainer">
             {projects.map((item) => (
-              <ProjectCard project={item} />
+              <ProjectCard key={item._id} project={item} />
             ))}
           </div>
         </div>

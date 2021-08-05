@@ -1,30 +1,21 @@
 import "../styles/style.css";
 import "../styles/main.css";
-import Menu from "../components/Menu";
-import App from "next/app"
+import dynamic from 'next/dynamic'
 
-const resumeQuery = `*[_type == "resume"] | order(_createdAt desc) [0]{
-  "resumePath": resumeFile.asset->url,
-  resumeTitle
-}`;
+const Menu = dynamic(() => import("../components/Menu"));
 
-function MyApp({ Component, pageProps, resume }) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Menu resumeFile={resume}></Menu>
       <Component {...pageProps} />
-      <script async type="text/javascript" src="/js/jquery.min.js"></script>
+      <Menu></Menu>
+      {/* <script async type="text/javascript" src="/js/jquery.min.js"></script>
       <script async type="text/javascript" src="/js/browser.min.js"></script>
       <script async type="text/javascript" src="/js/breakpoints.min.js"></script>
       <script async type="text/javascript" src="/js/util.js"></script>
-      <script async type="text/javascript" src="/js/main.js"></script>
+      <script async type="text/javascript" src="/js/main.js"></script> */}
     </>
   );
-}
-
-export async function getInitialProps(context) {
-  const resume = await sanityClient.fetch(resumeQuery);
-  return { props: { resume } };
 }
 
 export default MyApp;

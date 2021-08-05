@@ -11,9 +11,7 @@ const ProjectCard = ({ project }) => {
         <header>
           <h3>{project.projectName}</h3>
         </header>
-        <p>
           <PortableText blocks={project.description} />
-        </p>
         <footer>
           <ul className="actions">
             {listDetails({ project })}

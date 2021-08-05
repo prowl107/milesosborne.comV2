@@ -1,10 +1,19 @@
-import Header from "./Header";
 import Link from "next/link";
+const resumePath = "/Resume.pdf";
 
-const Menu = ({resumeFile}) => {
+const Menu = () => {
   return (
-    <>
-      <Header></Header>
+    <div suppressHydrationWarning>
+      <header id="header">
+        <nav>
+          <ul>
+            <li>
+              <a href="#menu">Menu</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
       <nav id="menu">
         <h2>Menu</h2>
         <ul className="links">
@@ -29,13 +38,18 @@ const Menu = ({resumeFile}) => {
             </Link>
           </li>
           <li>
-            <a href="">{resumeFile?.resumeTitle}</a>
-          {/* <a href={`${resumeFile.resumePath}?dl=`} target="_blank">Resume</a> */}
+            <a
+              href={encodeURI(resumePath)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
+            </a>
           </li>
         </ul>
       </nav>
-    </>
+    </div>
   );
-};
+}
 
 export default Menu;

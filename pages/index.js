@@ -6,9 +6,18 @@ import Contact from "../components/Contact";
 import { sanityClient, urlFor } from "../lib/sanity";
 
 const profileQuery = `*[_type == "profile"] | order(_createdAt desc) [0]`;
-const featuredQuery = `*[_type == "project" && featured == true] { _id, projectName, slug, description, thumbnail, sourceURL, documentationURL, hasDocumentation}`;
-const resumeQuery = `*[_type == "resume"] | order(_createdAt desc) [0]{
-  "resumeFile": resumeFile.asset->url
+const featuredQuery = `*[_type == "project" && featured == true] 
+{
+  projectName,
+  slug, 
+  description,
+  thumbnail,
+  sourceURL,
+  documentationURL->{
+    slug
+  },
+  documentationRef,
+  _id
 }`;
 
 export default function Home({ profile, featuredProjects }) {

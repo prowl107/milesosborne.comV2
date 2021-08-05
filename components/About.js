@@ -6,12 +6,7 @@ const About = ({profile}) => {
       <div className="inner">
         <header>
           <h2>About Me</h2>
-          <p>
-            <PortableText blocks={profile.bio}/>
-            {/* Rutrum facilisis. className aptent taciti sociosqu
-            <br />
-            litora torquent et conubia etiam nostra. */}
-          </p>
+          <PortableText blocks={profile.bio}/>
         </header>
         <ul className="icons major style2">
           <li>
