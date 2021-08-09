@@ -1604,6 +1604,7 @@ form > .fields {
  flex-wrap: wrap;
  width: calc(100% + 3em);
  margin: -1.5em 0 2em -1.5em;
+ color: White;
 }
 form > .fields > .field {
  -moz-flex-grow: 0;
@@ -1768,19 +1769,19 @@ input[type="radio"] + label:before {
  border-radius: 100%;
 }
 ::-webkit-input-placeholder {
- color: black;
+ color: white;
  opacity: 1;
 }
 :-moz-placeholder {
- color: black;
+ color: rgb(197, 197, 197);
  opacity: 1;
 }
 ::-moz-placeholder {
- color: black;
+ color: white;
  opacity: 1;
 }
 :-ms-input-placeholder {
- color: black;
+ color: white;
  opacity: 1;
 }
 select {
@@ -1794,9 +1795,10 @@ input[type="password"],
 input[type="email"],
 select,
 textarea {
- background-color: #ffffff;
- border-color: rgba(86, 86, 86, 0.25);
+ background-color: rgb(45,45,45);
+ border-color: rgb(86, 86, 86);
 }
+
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
@@ -2299,8 +2301,9 @@ table.alt tbody tr td {
 }
 .spotlight .image img {
  width: 100%;
- max-width: 500px;
- max-height: 400px;
+ max-width: 645px;
+ max-height: 461px;
+ object-fit: initial;
 }
 .spotlight .content {
  margin: 0 2em 0 0;
@@ -2404,8 +2407,10 @@ table.alt tbody tr td {
  padding: 7.5em 0 5.5em 0 ;
 }
 .wrapper > .inner {
- width: 72em;
- max-width: 100%;
+ /* width: 72em; */
+ /* max-width: 100%; */
+ max-width: 1200px;
+ display: block;
  margin: 0 auto;
 }
 @media screen and (max-width: 1680px) {
@@ -2422,7 +2427,8 @@ table.alt tbody tr td {
 
 @media screen and (max-width: 1680px) {
  .wrapper > .projects-list {
-  width: 85em;
+  max-width: 85em;
+  width: 100%;
  }
 }
 .wrapper.style1 {
@@ -2580,12 +2586,13 @@ table.alt tbody tr td {
 .wrapper.featured > .inner > .image {
  display: block;
  margin: 0 4em 2em 0;
- width: 21em;
+ width: 18em;
 }
 .wrapper.featured > .inner > .image img {
  border-radius: 100%;
- width: 7;
- max-width: 100%;
+ /* width: 7;
+ max-width: 100%; */
+ width: 100%;
 }
 .wrapper.featured > .inner > .content h1 {
  font-size: 4em;
@@ -3317,6 +3324,22 @@ body.is-preload #intro .content {
      margin: 0 0 3em 0 !important;
      width: 100%;
     }
+
+    @media screen and (max-width: 360px) {
+      .projectCard .image>img{
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+        max-height: 225px;
+      }
+    }
+
+    @media screen and (max-width: 420px) {
+      .projectCard .image>img{
+        max-height: 250px;
+      }
+    }
+
     .projectCard .content {
      margin: 0 !important;
      text-align: center;
@@ -3367,3 +3390,24 @@ body.is-preload #intro .content {
       width: 90%; 
     }
    }
+
+   .documentation figure{
+     width: 50%;
+     margin: 0 auto;
+   }
+
+   .documentation figure>img{
+     width: 100%;
+   }
+
+   @media screen and (max-width: 360px){
+    .documentation figure{
+      width: 75%;
+    }
+   }
+
+   @media screen and (max-width: 480px){
+    .documentation figure{
+      width: 75%;
+    }
+  }

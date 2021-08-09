@@ -9,11 +9,11 @@ function MyApp({ Component, pageProps }) {
     <>
       <Component {...pageProps} />
       <Menu></Menu>
-      {/* <script async type="text/javascript" src="/js/jquery.min.js"></script>
+      <script async type="text/javascript" src="/js/jquery.min.js"></script>
       <script async type="text/javascript" src="/js/browser.min.js"></script>
       <script async type="text/javascript" src="/js/breakpoints.min.js"></script>
       <script async type="text/javascript" src="/js/util.js"></script>
-      <script async type="text/javascript" src="/js/main.js"></script> */}
+      <script async type="text/javascript" src="/js/main.js"></script>
     </>
   );
 }

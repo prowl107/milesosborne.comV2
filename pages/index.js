@@ -5,7 +5,7 @@ import Featured from "../components/Featured";
 import Contact from "../components/Contact";
 import { sanityClient, urlFor } from "../lib/sanity";
 
-const profileQuery = `*[_type == "profile"] | order(_createdAt desc) [0]`;
+const profileQuery = `*[_type == "profile"] | order(updatedAt desc) [0]`;
 const featuredQuery = `*[_type == "project" && featured == true] 
 {
   projectName,

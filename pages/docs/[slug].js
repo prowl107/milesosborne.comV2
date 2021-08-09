@@ -1,4 +1,3 @@
-import { groq } from "next-sanity";
 import { useRouter } from "next/router";
 
 import {
@@ -20,30 +19,37 @@ export default function documentation({ projectDoc }) {
     return <Error statusCode={404} />;
   }
 
+  if (!projectDoc) return <div>Loading...</div>;
+
   return (
     <div
       id="wrapper"
       style={{ height: 100 + "vh", backgroundColor: "#1b1c1c" }}
     >
-      <section id="main" className="wrapper style1">
+      <section id="main" className="wrapper style1 documentation">
         <div className="inner">
           <header className="major">
             <h1>{projectDoc?.projectName}</h1>
             <p>Lorem ipsum dolor sit magna consectetur</p>
           </header>
-          <span className="image main">
-            {/* <img
-              src="/images/minimal-abstract-background-5k-hi-1920x1080.jpg"
-              alt=""
-            /> */}
-          </span>
-          <p>
-            <PortableText blocks={projectDoc?.docs?.content}/>
-          </p>
+          {getDocumentBanner({ projectDoc })}
+          <PortableText blocks={projectDoc?.docs?.content} />
         </div>
       </section>
     </div>
   );
+}
+
+function getDocumentBanner({ projectDoc }) {
+  {
+    if (projectDoc.docs.banner != null) {
+      return (
+        <span class="image main">
+          <img src={urlFor(projectDoc.docs.banner)?.url()} />
+        </span>
+      );
+    }
+  }
 }
 
 export async function getStaticPaths() {

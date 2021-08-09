@@ -12,20 +12,7 @@ class MyDocument extends Document {
         <Head />
         <body className="is-preload">
           <Main />
-          <NextScript />
-          <script async type="text/javascript" src="/js/jquery.min.js"></script>
-          <script
-            async
-            type="text/javascript"
-            src="/js/browser.min.js"
-          ></script>
-          <script
-            async
-            type="text/javascript"
-            src="/js/breakpoints.min.js"
-          ></script>
-          <script async type="text/javascript" src="/js/util.js"></script>
-          <script async type="text/javascript" src="/js/main.js"></script>
+          <NextScript/>
         </body>
       </Html>
     );
