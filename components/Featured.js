@@ -17,6 +17,7 @@ const Featured = ({ projects }) => {
           projects.map((item) => (
             <SpotlightCard key={item._id} featureProject = {item}/>
           ))}
+          {addLinkAttribute()}
         <footer>
           <ul className="actions special">
             <li>
@@ -30,5 +31,18 @@ const Featured = ({ projects }) => {
     </section>
   );
 };
+
+
+function addLinkAttribute() {
+  if (typeof window !== "undefined") {
+    const textBlock = document.getElementsByClassName("project-description");
+    for (let i = 0; i < textBlock.length; i++) {
+      var text = textBlock[i].getElementsByTagName("a");
+      for (let j = 0; j < text.length; j++) {
+        text[j].setAttribute("target", "_blank");
+      }
+    }
+  }
+}
 
 export default Featured;

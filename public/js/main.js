@@ -70,10 +70,10 @@
   // Hide.
   $menu._hide();
 
-  // 	// Redirect.
-  // 		window.setTimeout(function() {
-  // 			window.location.href = href;
-  // 		}, 250);
+  	// Redirect.
+  		window.setTimeout(function() {
+  			window.location.href = href;
+  		}, 250);
 
   });
 

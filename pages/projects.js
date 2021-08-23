@@ -28,6 +28,7 @@ export default function projects({ projects }) {
             {projects.map((item) => (
               <ProjectCard key={item._id} project={item} />
             ))}
+            {addLinkAttribute()}
           </div>
         </div>
       </section>
@@ -38,4 +39,16 @@ export default function projects({ projects }) {
 export async function getStaticProps() {
   const projects = await sanityClient.fetch(projectsQuery);
   return { props: { projects } };
+}
+
+function addLinkAttribute() {
+  if (typeof window !== "undefined") {
+    const textBlock = document.getElementsByClassName("project-description");
+    for (let i = 0; i < textBlock.length; i++) {
+      var text = textBlock[i].getElementsByTagName("a");
+      for (let j = 0; j < text.length; j++) {
+        text[j].setAttribute("target", "_blank");
+      }
+    }
+  }
 }

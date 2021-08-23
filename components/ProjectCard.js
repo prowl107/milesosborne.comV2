@@ -11,7 +11,10 @@ const ProjectCard = ({ project }) => {
         <header>
           <h3>{project.projectName}</h3>
         </header>
-          <PortableText blocks={project.description} />
+        <PortableText
+          className="project-description"
+          blocks={project.description}
+        />
         <footer>
           <ul className="actions">
             {listDetails({ project })}

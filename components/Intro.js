@@ -6,23 +6,26 @@ const Intro = ({profilePic}) => {
       <div className="inner">
         <span className="image">
         <img src={urlFor(profilePic).url()} />
-          {/* <Image layout="intrinsic" src={profilePic} alt="" /> */}
         </span>
         <div className="content">
           <header>
-            <h1>Hi, Im Miles</h1>
+            <h1>Hi, I'm Miles</h1>
             <p>
               Embedded software engineer
-              <br />
-              and sometimes a rocket scientist on the weekend
+              <br />  and sometimes a rocket scientist on the weekend
               <br />
             </p>
           </header>
           <footer>
             <ul className="actions">
               <li>
-                <a href="#" className="button big">
-                  Get Started
+                <a href="#contact" className="button big">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="/Resume.pdf" target="_blank" className="button big">
+                  Resume
                 </a>
               </li>
             </ul>

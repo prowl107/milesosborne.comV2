@@ -12,7 +12,7 @@ class MyDocument extends Document {
         <Head />
         <body className="is-preload">
           <Main />
-          <NextScript/>
+          <NextScript />
         </body>
       </Html>
     );

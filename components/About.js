@@ -1,49 +1,45 @@
 import { PortableText } from "../lib/sanity";
 
-const About = ({profile}) => {
+const About = ({ profile }) => {
   return (
     <section className="wrapper style2 special" id="about">
       <div className="inner">
         <header>
           <h2>About Me</h2>
-          <PortableText blocks={profile.bio}/>
+          <PortableText blocks={profile.bio} />
         </header>
-        <ul className="icons major style2">
-          <li>
-            <span className="icon solid fa-code">
-              <span className="label">Lorem</span>
-            </span>
-          </li>
-          <li>
-            <span className="icon solid fa-cog">
-              <span className="label">Ipsum</span>
-            </span>
-          </li>
-          <li>
-            <span className="icon solid fa-gem">
-              <span className="label">Dolor</span>
-            </span>
-          </li>
-          <li>
-            <span className="icon solid fa-camera-retro">
-              <span className="label">Feugiat</span>
-            </span>
-          </li>
-          <li>
-            <span className="icon solid fa-briefcase">
-              <span className="label">Tempus</span>
-            </span>
-          </li>
-        </ul>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus
-          rutrum facilisis. className aptent taciti sociosqu ad litora torquent per
-          conubia nostra, per inceptos himenaeos malesuada fames ac turpis
-          egestas. In non lorem amet. Duis dapibus rutrum facilisis. className
-          aptent taciti sociosqu ad litora torquent per conubia nostra, per
-          inceptos himenaeos. Etiam tristique eu nibh.
-        </p>
-        <footer>
+        <div className="container">
+          <div id="skills" className="row">
+            <div className="col-1"></div>
+            <div className="col-md-auto col-12-medium">
+              <h3>Software Development</h3>
+              <ul>
+                <li>Embedded C, Python, C++.</li>
+                <li>HTML, CSS, Javascript.</li>
+                <li>Felis enim feugiat.</li>
+              </ul>
+            </div>
+            <div className="col-md-auto col-12-medium">
+              <h3>Embedded Systems</h3>
+              <ul>
+                <li>STM Microcontrollers</li>
+                <li>Bare Metal Drivers.</li>
+                <li>Arduino</li>
+              </ul>
+            </div>
+
+            <div className="col-md-auto col-12-medium">
+              <h3>CAD/Design</h3>
+              <ul>
+                <li>Autodesk Fusion 360</li>
+                <li>CATIA</li>
+                <li>KiCad</li>
+              </ul>
+            </div>
+            <div className="col-md-auto"></div>
+          </div>
+        </div>
+        {/* <footer>
           <ul className="actions special">
             <li>
               <a href="#" className="button">
@@ -51,7 +47,7 @@ const About = ({profile}) => {
               </a>
             </li>
           </ul>
-        </footer>
+        </footer> */}
       </div>
     </section>
   );

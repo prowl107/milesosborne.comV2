@@ -11,7 +11,7 @@ const SpotlightCard = ({featureProject}) => {
         <header>
           <h3>{featureProject.projectName}</h3>
         </header>
-          <PortableText blocks={featureProject.description} />
+          <PortableText className="project-description" blocks={featureProject.description} />
         <footer>
           <ul className="actions">
             {listDetails({ featureProject })}

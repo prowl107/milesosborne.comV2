@@ -40,7 +40,7 @@ export default {
                 styles: [{ title: "Normal", value: "normal"}],
                 lists: [],
                }
-           ]
+           ],
         },
         {
             name: "sourceURL",
