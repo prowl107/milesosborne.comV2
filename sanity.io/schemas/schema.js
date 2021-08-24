@@ -6,7 +6,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import Profile from './profile'
 import Project from './project'
 import Documentation from './documentation'
-import Resume from './resume'
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -15,6 +15,6 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     /* Your types here! */
-    Profile,Project,Documentation,Resume
+    Profile,Project,Documentation
   ]),
 })
