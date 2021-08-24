@@ -40,6 +40,7 @@ function addLinkAttribute() {
       var text = textBlock[i].getElementsByTagName("a");
       for (let j = 0; j < text.length; j++) {
         text[j].setAttribute("target", "_blank");
+        text[j].setAttribute("rel","noreferrer");
       }
     }
   }

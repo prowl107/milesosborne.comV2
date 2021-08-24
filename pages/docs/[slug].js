@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import {
   sanityClient,
   urlFor,
-  usePreviewSubscription,
   PortableText,
 } from "../../lib/sanity";
 
@@ -17,6 +16,11 @@ export default function documentation({ projectDoc }) {
   const router = useRouter();
   if (!router.isFallback && !projectDoc?.slug) {
     return <Error statusCode={404} />;
+  }
+
+  if (router.isFallback)
+  {
+    return <div>Loading...</div>
   }
 
   if (!projectDoc) return <div>Loading...</div>;
@@ -42,7 +46,7 @@ export default function documentation({ projectDoc }) {
 
 function getDocumentBanner({ projectDoc }) {
   {
-    if (projectDoc.docs.banner != null) {
+    if (projectDoc?.docs?.banner != null) {
       return (
         <span class="image main">
           <img src={urlFor(projectDoc.docs.banner)?.url()} />
