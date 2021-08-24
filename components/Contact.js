@@ -15,6 +15,7 @@ const Contact = () => {
     e.preventDefault();
     await submit({ name, email, message });
     alert("Form submitted");
+    window.location.href = "https://"+window.location.hostname;
   };
   return (
     <section id="contact" className="wrapper split style2">
@@ -114,8 +115,8 @@ const Contact = () => {
           </form>
         </section>
       </div>
-      <div className="copyright">
-        <p>
+      <div className="copyright inner" >
+        <p id="message">
           Miles Osborne - 2021 | Made with Next.js & Sanity.io
         </p>
       </div>

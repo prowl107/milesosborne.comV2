@@ -3137,6 +3137,11 @@ table.alt tbody tr td {
  border-top: solid 1px;
  opacity: 0.5;
 }
+
+#message{
+  margin-left: 0px;
+}
+
 @media screen and (max-width: 980px) {
  #footer ul.actions {
   -moz-justify-content: center;
