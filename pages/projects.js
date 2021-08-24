@@ -22,7 +22,6 @@ export default function projects({ projects }) {
         <div className="projects-list">
           <header className="major">
             <h1>Projects Archive</h1>
-            <p>Lorem ipsum dolor sit magna consectetur</p>
           </header>
           <div id="projectContainer">
             {projects.map((item) => (

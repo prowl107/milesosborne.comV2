@@ -8,9 +8,7 @@ const Featured = ({ projects }) => {
         <header>
           <h2>Featured Projects</h2>
           <p>
-            Rutrum facilisis. className aptent taciti sociosqu
-            <br />
-            litora torquent et conubia etiam nostra.
+            Some Things I've Built
           </p>
         </header>
         {

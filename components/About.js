@@ -16,7 +16,6 @@ const About = ({ profile }) => {
               <ul>
                 <li>Embedded C, Python, C++.</li>
                 <li>HTML, CSS, Javascript.</li>
-                <li>Felis enim feugiat.</li>
               </ul>
             </div>
             <div className="col-md-auto col-12-medium">
@@ -39,15 +38,6 @@ const About = ({ profile }) => {
             <div className="col-md-auto"></div>
           </div>
         </div>
-        {/* <footer>
-          <ul className="actions special">
-            <li>
-              <a href="#" className="button">
-                Details
-              </a>
-            </li>
-          </ul>
-        </footer> */}
       </div>
     </section>
   );

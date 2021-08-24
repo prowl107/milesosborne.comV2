@@ -24,10 +24,7 @@ const Contact = () => {
             <h3>Contact</h3>
           </header>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            dapibus rutrum facilisis. className aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos magna fames ac
-            turpis egestas amet non lorem amet.
+            Have a question? Just want to say hi? Feel free to reach out!
           </p>
           <ul className="icons">
             <li>
@@ -117,12 +114,11 @@ const Contact = () => {
           </form>
         </section>
       </div>
-      {/* <div className="copyright">
+      <div className="copyright">
         <p>
-          &copy; Untitled. All rights reserved. Lorem ipsum dolor sit amet
-          nullam.
+          Miles Osborne - 2021 | Made with Next.js & Sanity.io
         </p>
-      </div> */}
+      </div>
     </section>
   );
 };
