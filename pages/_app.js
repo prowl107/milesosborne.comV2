@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Component {...pageProps} />
       <Menu></Menu>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
       <script async type="text/javascript" src="/js/jquery.min.js"></script>
       <script async type="text/javascript" src="/js/browser.min.js"></script>
       <script async type="text/javascript" src="/js/breakpoints.min.js"></script>
