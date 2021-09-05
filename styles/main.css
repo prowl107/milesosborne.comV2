@@ -2308,6 +2308,7 @@ table.alt tbody tr td {
  max-width: 500px;
  max-height: 400px;
  object-fit: initial;
+ margin: auto;
 }
 .spotlight .content {
  margin: 0 2em 0 0;

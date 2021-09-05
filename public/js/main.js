@@ -72,7 +72,7 @@
 
   	// Redirect.
   		window.setTimeout(function() {
-  			window.location.href = href;
+  			// window.location.href = href;
   		}, 250);
 
   });
