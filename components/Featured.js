@@ -7,15 +7,12 @@ const Featured = ({ projects }) => {
       <div className="inner">
         <header>
           <h2>Featured Projects</h2>
-          <p>
-            Some Things I've Built
-          </p>
+          <p>Some Things I've Built</p>
         </header>
-        {
-          projects.map((item) => (
-            <SpotlightCard key={item._id} featureProject = {item}/>
-          ))}
-          {addLinkAttribute()}
+        {projects.map((item) => (
+          <SpotlightCard key={item._id} featureProject={item} />
+        ))}
+        {addLinkAttribute()}
         <footer>
           <ul className="actions special">
             <li>
@@ -30,17 +27,22 @@ const Featured = ({ projects }) => {
   );
 };
 
-
 function addLinkAttribute() {
   if (typeof window !== "undefined") {
-    const textBlock = document.getElementsByClassName("project-description");
-    for (let i = 0; i < textBlock.length; i++) {
-      var text = textBlock[i].getElementsByTagName("a");
-      for (let j = 0; j < text.length; j++) {
-        text[j].setAttribute("target", "_blank");
-        text[j].setAttribute("rel","noreferrer");
+    $(document).ready(function () {
+      const textBlock = document.getElementsByClassName("project-description");
+      for (let i = 0; i < textBlock.length; i++) {
+        var text = textBlock[i].getElementsByTagName("a");
+        for (let j = 0; j < text.length; j++) {
+          if (!text[j].hasAttribute("target")) {
+            text[j].setAttribute("target", "_blank");
+          }
+          if (!text[j].hasAttribute("rel")) {
+            text[j].setAttribute("rel", "noreferrer");
+          }
+        }
       }
-    }
+    });
   }
 }
 
