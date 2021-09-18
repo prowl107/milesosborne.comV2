@@ -6,7 +6,8 @@ const About = ({ profile }) => {
       <div className="inner">
         <header>
           <h2>About Me</h2>
-          <PortableText blocks={profile.bio} />
+          <PortableText className="bio" blocks={profile.bio}/>
+          {addLinkAttribute()}
         </header>
         <div className="container">
           <div id="skills" className="row">
@@ -42,5 +43,18 @@ const About = ({ profile }) => {
     </section>
   );
 };
+
+function addLinkAttribute() {
+  if (typeof window !== "undefined") {
+    const textBlock = document.getElementsByClassName("bio");
+    for (let i = 0; i < textBlock.length; i++) {
+      var text = textBlock[i].getElementsByTagName("a");
+      for (let j = 0; j < text.length; j++) {
+        text[j].setAttribute("target", "_blank");
+        text[j].setAttribute("rel","noreferrer");
+      }
+    }
+  }
+}
 
 export default About;
