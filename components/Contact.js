@@ -1,22 +1,5 @@
-import React, { useState } from "react";
-import { useFormspark } from "@formspark/use-formspark";
-const FORMSPARK_FORM_ID = "GvHjf2rm";
-
+import Form from "./Form";
 const Contact = () => {
-  const [submit, submitting] = useFormspark({
-    formId: FORMSPARK_FORM_ID,
-  });
-
-  const [message, setMessage] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    await submit({ name, email, message });
-    alert("Form submitted");
-    window.location.href = "https://"+window.location.hostname;
-  };
   return (
     <section id="contact" className="wrapper split style2">
       <div className="inner">
@@ -24,9 +7,7 @@ const Contact = () => {
           <header>
             <h3>Contact</h3>
           </header>
-          <p>
-            Have a question? Just want to say hi? Feel free to reach out!
-          </p>
+          <p>Have a question? Just want to say hi? Feel free to reach out!</p>
           <ul className="icons">
             <li>
               <a
@@ -57,68 +38,11 @@ const Contact = () => {
           </ul>
         </section>
         <section>
-          <form
-            method="post"
-            action="https://submit-form.com/GvHjf2rm"
-            onSubmit={onSubmit}
-          >
-            <input type="hidden" name="_feedback.dark" value="true" />
-            <input
-              type="hidden"
-              name="_feedback.success.message"
-              value="Go back"
-            />
-            <div className="fields">
-              <div className="field half">
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Name"
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </div>
-              <div className="field half">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-              <div className="field">
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Message"
-                  rows="4"
-                  required
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                ></textarea>
-              </div>
-            </div>
-            <ul className="actions">
-              <li>
-                <input
-                  type="submit"
-                  value="Send Message"
-                  disabled={submitting}
-                />
-              </li>
-            </ul>
-          </form>
+          <Form></Form>
         </section>
       </div>
-      <div className="copyright inner" >
-        <p id="message">
-          Miles Osborne - 2021 | Made with Next.js & Sanity.io
-        </p>
+      <div className="copyright inner">
+        <p id="message">Miles Osborne - 2021 | Made with Next.js & Sanity.io</p>
       </div>
     </section>
   );

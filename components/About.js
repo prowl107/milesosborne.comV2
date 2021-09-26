@@ -15,16 +15,17 @@ const About = ({ profile }) => {
             <div className="col-md-auto col-12-medium">
               <h3>Software Development</h3>
               <ul>
-                <li>Embedded C, Python, C++.</li>
+                <li>C, C++, Python</li>
+                <li>Embedded C</li>
                 <li>HTML, CSS, Javascript.</li>
               </ul>
             </div>
             <div className="col-md-auto col-12-medium">
               <h3>Embedded Systems</h3>
               <ul>
-                <li>STM Microcontrollers</li>
-                <li>Bare Metal Drivers.</li>
-                <li>Arduino</li>
+                <li>ST Microcontrollers (STM32)</li>
+                <li>SPI, I2C, USB</li>
+                <li>Arduino/AVR</li>
               </ul>
             </div>
 
@@ -32,7 +33,6 @@ const About = ({ profile }) => {
               <h3>CAD/Design</h3>
               <ul>
                 <li>Autodesk Fusion 360</li>
-                <li>CATIA</li>
                 <li>KiCad</li>
               </ul>
             </div>
