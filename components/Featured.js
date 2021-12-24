@@ -17,7 +17,7 @@ const Featured = ({ projects }) => {
           <ul className="actions special">
             <li>
               <Link href="/projects">
-                <a className="button">View the archive</a>
+                <a className="button">View All Projects</a>
               </Link>
             </li>
           </ul>
