@@ -11,7 +11,7 @@ const Intro = ({profilePic}) => {
           <header>
             <h1>Hi, I'm Miles</h1>
             <p>
-              Embedded software engineer
+              Embedded Software Engineer
               <br />  and sometimes a rocket scientist on the weekend
               <br />
             </p>
