@@ -1,3 +1,6 @@
+import createSchema from 'part:@sanity/base/schema-creator'
+import schemaTypes from 'all:part:@sanity/base/schema-type'
+
 export default {
   name: "documentation",
   title: "Documentation",
@@ -43,13 +46,24 @@ export default {
               { title: "Highlight", value: "highlight" },
             ],
           },
-          lists: [],
+          lists: [
+            {title: 'Bullet', value: 'bullet'},
+            {title: 'Numbered', value: 'number'}
+          ],
         },
         {
           type: "image",
           options: {
             hotspot: true,
           },
+        },
+        {
+          name: 'code',
+          title: 'Code',
+          type: 'code',
+          options: {
+            theme: 'solarized_dark',
+          }
         },
       ],
     },

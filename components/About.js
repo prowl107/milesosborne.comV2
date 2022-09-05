@@ -15,17 +15,40 @@ const About = ({ profile }) => {
             <div className="col-md-auto col-12-medium">
               <h3>Software Development</h3>
               <ul>
-                <li>C, C++, Python</li>
                 <li>Embedded C</li>
-                <li>HTML, CSS, Javascript.</li>
+                <li>C/C++</li>
+                <li>Python</li>
               </ul>
             </div>
             <div className="col-md-auto col-12-medium">
               <h3>Embedded Systems</h3>
               <ul>
-                <li>ST Microcontrollers (STM32)</li>
+                <li>VxWorks RTOS</li>
                 <li>SPI, I2C, USB</li>
-                <li>Arduino/AVR</li>
+                <li>ARM assembly</li>
+              </ul>
+            </div>
+
+            <div className="col-md-auto col-12-medium">
+              <h3>Platforms</h3>
+              <ul>
+                <li>ST Microcontrollers (STM32)</li>
+                <li>AVR/Arduino</li>
+                <li>ARM</li>
+                <li>NXP</li>
+              </ul>
+            </div>
+            <div className="col-md-auto"></div>
+          </div>
+
+          <div id="skills" className="row">
+            <div className="col-1"></div>
+            <div className="col-md-auto col-12-medium">
+              <h3>Web Development</h3>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
               </ul>
             </div>
 
