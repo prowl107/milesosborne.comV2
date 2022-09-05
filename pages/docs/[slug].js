@@ -34,12 +34,11 @@ export default function documentation({ projectDoc }) {
         <div className="inner">
           <header className="major">
             <h1>{projectDoc?.projectName}</h1>
-            <p>Lorem ipsum dolor sit magna consectetur</p>
           </header>
           {getDocumentBanner({ projectDoc })}
           <PortableText blocks={projectDoc?.docs?.content} />
         </div>
-      </section>
+      </section> 
     </div>
   );
 }

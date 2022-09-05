@@ -11,17 +11,20 @@
   "dependencies": {
     "@botpoison/browser": "^0.1.27",
     "@formspark/use-formspark": "^0.1.33",
+    "@portabletext/react": "^1.0.6",
+    "@types/react-syntax-highlighter": "^15.5.5",
     "axios": "^0.21.1",
     "next": "^12.0.7",
     "next-sanity": "^0.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-syntax-highlighter": "^15.5.0",
     "url-loader": "^4.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.1",
-    "eslint": "7.30.0",
-    "eslint-config-next": "11.0.1",
+    "eslint": "^8.20.0",
+    "eslint-config-next": "^0.2.4",
     "postcss": "^8.3.6"
   }
 }
