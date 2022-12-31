@@ -1,11 +1,11 @@
 {
   "root": true,
-  "project": {
-    "name": "milesosborne.comV2"
-  },
   "api": {
     "projectId": "n7m4qrmh",
     "dataset": "production"
+  },
+  "project": {
+    "name": "milesosborne.comV2"
   },
   "plugins": [
     "@sanity/base",

@@ -16,6 +16,7 @@ const About = ({ profile }) => {
               <h3>Software Development</h3>
               <ul>
                 <li>Embedded C</li>
+                <li>Verilog</li>
                 <li>C/C++</li>
                 <li>Python</li>
               </ul>
@@ -24,7 +25,7 @@ const About = ({ profile }) => {
               <h3>Embedded Systems</h3>
               <ul>
                 <li>VxWorks RTOS</li>
-                <li>SPI, I2C, USB</li>
+                <li>SPI, I2C, UART, USB</li>
                 <li>ARM assembly</li>
               </ul>
             </div>
@@ -36,6 +37,7 @@ const About = ({ profile }) => {
                 <li>AVR/Arduino</li>
                 <li>ARM</li>
                 <li>NXP</li>
+                <li>Artix-7 FPGA</li>
               </ul>
             </div>
             <div className="col-md-auto"></div>
@@ -57,6 +59,16 @@ const About = ({ profile }) => {
               <ul>
                 <li>Autodesk Fusion 360</li>
                 <li>KiCad</li>
+              </ul>
+            </div>
+
+            <div className="col-md-auto col-12-medium">
+              <h3>Research Interests</h3>
+              <ul>
+                <li>Embedded systems/software</li>
+                <li>Real-time systems</li>
+                <li>Software engineering practices</li>
+                <li>Computer architecture</li>
               </ul>
             </div>
             <div className="col-md-auto"></div>
