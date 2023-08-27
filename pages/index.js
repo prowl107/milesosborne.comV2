@@ -25,7 +25,7 @@ export default function Home({ profile, featuredProjects }) {
     <div id="wrapper">
       <Head>
         <title>Miles Osbone</title>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no"

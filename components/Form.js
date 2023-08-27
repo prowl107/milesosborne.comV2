@@ -20,7 +20,7 @@ const Form = () => {
 
   return (
     <form method="post" action="?" onSubmit={onSubmit}>
-      <div class="g-recaptcha" data-sitekey="6Lf0VI8cAAAAAJbK7No-fOO89VP8jaWU6sZcE_a8"></div>
+      <div className="g-recaptcha" data-sitekey="6Lf0VI8cAAAAAJbK7No-fOO89VP8jaWU6sZcE_a8"></div>
       <input type="hidden" name="_feedback.dark" value="true" />
       <input type="hidden" name="_feedback.success.message" value="Go back" />
       <div className="fields">

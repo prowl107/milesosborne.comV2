@@ -7,12 +7,6 @@ const Menu = dynamic(() => import("../components/Menu"));
 
 function MyApp({ Component, pageProps }) {
 
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true)
-}, [])
-
   return (
     <>
       <Component {...pageProps} />
