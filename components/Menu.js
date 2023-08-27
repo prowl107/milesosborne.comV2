@@ -19,22 +19,22 @@ const Menu = () => {
         <ul className="links">
           <li>
             <Link href="/">
-              <a>Home</a>
+              Home
             </Link>
           </li>
           <li>
             <Link href="/#about">
-              <a>About me</a>
+              About me
             </Link>
           </li>
           <li>
             <Link href="/#featured">
-              <a>Projects</a>
+              Projects
             </Link>
           </li>
           <li>
             <Link href="/#contact">
-              <a>Contact</a>
+              Contact
             </Link>
           </li>
           <li>

@@ -1,10 +1,18 @@
 import "../styles/style.css";
 import "../styles/main.css";
 import dynamic from 'next/dynamic'
+import { useState, useEffect } from 'react'
 
 const Menu = dynamic(() => import("../components/Menu"));
 
 function MyApp({ Component, pageProps }) {
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true)
+}, [])
+
   return (
     <>
       <Component {...pageProps} />

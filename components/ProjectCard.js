@@ -38,10 +38,10 @@ function listDetails({ project }) {
   } else if (project.documentationRef != null) {
     return (
       <li>
-        <Link href={`/docs/${project.slug.current}`}>
-          <a href="" className="button">
+        <Link href={`/docs/${project.slug.current}`} className="button">
+          
             Details
-          </a>
+          
         </Link>
       </li>
     );

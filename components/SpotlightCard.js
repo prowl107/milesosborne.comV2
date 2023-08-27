@@ -35,10 +35,10 @@ function listDetails({ featureProject }) {
   } else if (featureProject.documentationRef != null) {
     return (
       <li>
-        <Link href={`/docs/${featureProject.slug.current}`}>
-          <a href="" className="button">
+        <Link href={`/docs/${featureProject.slug.current}`} className="button">
+          
             Details
-          </a>
+          
         </Link>
       </li>
     );

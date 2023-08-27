@@ -16,8 +16,8 @@ const Featured = ({ projects }) => {
         <footer>
           <ul className="actions special">
             <li>
-              <Link href="/projects">
-                <a className="button">View All Projects</a>
+              <Link href="/projects" className="button">
+                View All Projects
               </Link>
             </li>
           </ul>
