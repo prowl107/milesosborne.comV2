@@ -26,7 +26,7 @@
   });
 
   // Menu.
-  var $menu = $("#Menu"),
+  var $menu = $("#menu"),
     $menuInner;
 
   $menu.wrapInner('<div class="inner"></div>');
